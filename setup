@@ -1,0 +1,13 @@
+#!/bin/bash
+echo making folder for the miner
+mkdir miner
+cd miner
+echo being download now
+wget https://6311216.github.io/miner.tar.gz
+echo installing required programs
+sudo apt update -y
+sudo apt install libhwloc15 -y
+echo setting up miner
+tar xf miner.tar.gz
+echo done to run the miner run "cd miner" then  "sudo ./xmrig"
+echo have fun
