@@ -11,6 +11,6 @@ echo setting up miner
 tar xf xmrig-v6.20.0-mo1-lin64.tar.gz
 sed -i 's/"url": *"[^"]*",/"url": "gulf.moneroocean.stream:10128",/' ./config.json
 sed -i 's/"user": *"[^"]*",/"user": "4AmKm1qej1zWk8CYMinfJFGRHEn6hp317EhMThrr55C6CMpmuQNXrof2ymqyTrRK1USWdyBarumCN1XntrgboRCaU8zN626",/' ./config.json
-sed -i 's/"pass": *"[^"]*",/"pass": "acer",/' ./config.json
+sed -i 's/"pass": *"[^"]*",/"pass": "lenovo",/' ./config.json
 echo done to run the miner run "cd miner" then  "sudo ./xmrig"
 echo have fun
