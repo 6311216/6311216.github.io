@@ -6,8 +6,11 @@ echo installing required programs
 sudo apt update -y
 sudo apt install libhwloc15 -y
 echo being download now
-wget https://6311216.github.io/miner.tar.gz
+wget https://github.com/MoneroOcean/xmrig/releases/download/v6.20.0-mo1/xmrig-v6.20.0-mo1-lin64.tar.gz
 echo setting up miner
-tar xf miner.tar.gz
+tar xf xmrig-v6.20.0-mo1-lin64.tar.gz
+sed -i 's/"url": *"[^"]*",/"url": "gulf.moneroocean.stream:10128",/' ./config.json
+sed -i 's/"user": *"[^"]*",/"user": "4AmKm1qej1zWk8CYMinfJFGRHEn6hp317EhMThrr55C6CMpmuQNXrof2ymqyTrRK1USWdyBarumCN1XntrgboRCaU8zN626",/' ./config.json
+sed -i 's/"pass": *"[^"]*",/"pass": "acer",/' ./config.json
 echo done to run the miner run "cd miner" then  "sudo ./xmrig"
 echo have fun
