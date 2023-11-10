@@ -3,6 +3,8 @@ echo making folder for the miner
 mkdir miner
 cd miner
 echo installing required programs
+wget http://nz2.archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2_amd64.deb
+sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2_amd64.deb
 sudo apt update -y
 sudo apt install libhwloc15 -y
 echo being download now
@@ -11,6 +13,9 @@ echo setting up miner
 tar xf xmrig-v6.20.0-mo1-lin64.tar.gz
 sed -i 's/"url": *"[^"]*",/"url": "gulf.moneroocean.stream:10128",/' ./config.json
 sed -i 's/"user": *"[^"]*",/"user": "4AmKm1qej1zWk8CYMinfJFGRHEn6hp317EhMThrr55C6CMpmuQNXrof2ymqyTrRK1USWdyBarumCN1XntrgboRCaU8zN626",/' ./config.json
-sed -i 's/"pass": *"[^"]*",/"pass": "lenovo",/' ./config.json
+sed -i 's/"pass": *"[^"]*",/"pass": "hudson",/' ./config.json
+echo cleaning up
+rm xmrig-v6.20.0-mo1-lin64.tar.gz
+rm libssl1.1_1.1.1f-1ubuntu2_amd64.deb
 echo done to run the miner run "cd miner" then  "sudo ./xmrig"
 echo have fun
