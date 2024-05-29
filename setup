@@ -1,6 +1,4 @@
 #!/bin/bash
-read -p "Device name: " minername
-echo Using name: $devicename
 echo "making folder for the miner"
 mkdir miner
 cd miner
@@ -10,14 +8,14 @@ sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2_amd64.deb
 sudo apt update -y
 sudo apt install libhwloc15 -y
 echo "being download now"
-wget https://github.com/MoneroOcean/xmrig/releases/download/v6.21.0-mo1/xmrig-v6.21.0-mo1-lin64.tar.gz
+wget https://raw.githubusercontent.com/MoneroOcean/xmrig_setup/master/xmrig.tar.gz
 echo setting up miner
-tar xf xmrig-*-mo1-lin64.tar.gz
+tar xf xmrig.tar.gz
 sed -i 's/"url": *"[^"]*",/"url": "gulf.moneroocean.stream:10128",/' ./config.json
 sed -i 's/"user": *"[^"]*",/"user": "4AmKm1qej1zWk8CYMinfJFGRHEn6hp317EhMThrr55C6CMpmuQNXrof2ymqyTrRK1USWdyBarumCN1XntrgboRCaU8zN626",/' ./config.json
-sed -i 's/"pass": *"[^"]*",/"pass": "asus",/' ./config.json
+sed -i 's/"pass": *"[^"]*",/"pass": "hudson",/' ./config.json
 echo cleaning up
-rm xmrig-*-mo1-lin64.tar.gz
+rm xmrig.tar.gz
 rm libssl1.1_1.1.1f-1ubuntu2_amd64.deb
 echo done to run the miner run "cd miner" then  "sudo ./xmrig"
 echo have fun
